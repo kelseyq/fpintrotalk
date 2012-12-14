@@ -1,2 +1,2 @@
-slides for intro to functional programming talk
+test slides for intro to functional programming talk
 
