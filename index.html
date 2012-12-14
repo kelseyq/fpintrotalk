@@ -4,16 +4,16 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Learning Functional Programming Without Growing a Neckbeard</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A presentation introducing the basic concepts of functional programming">
+		<meta name="author" content="Kelsey Innis">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -26,6 +26,47 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		<style>
+		.badge {
+			background-repeat:no-repeat;
+			background-position:left center;
+			height:120px;
+			background-color:#9D538E;
+			position:relative;
+			font-weight:bold;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+			top:20px;
+		}
+		.tough {
+			background-image:url('images/toughsmall.png');
+			width:58%;
+			left:21%;
+		}
+		.beautiful {
+			background-image:url('images/beautifulsmall.png');
+			width:44%;
+			left:28%;
+		}
+		.powerful {
+			background-image:url('images/powerfulsmall.png');
+			width:42%;
+			left:29%;
+		}
+		.badge :first-child {
+			top: 35px;
+			position:absolute;
+			left: 175px;	
+			color: white;
+			font-weight:bold;
+		}
+		img {
+		border: none !important;
+		 background:none !important; 
+		 box-shadow: none !important;
+		}
+		</style>
+
 	</head>
 
 	<body>
@@ -36,308 +77,1004 @@
 			<div class="slides">
 
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<center>
+						<h1>Learning Functional<br/>
+						 <span style="letter-spacing:-14px">Programming</span> <br/>
+						 without Growing a Neckbeard</h1>
+					 </center>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>by <a href="http://nerd.kelseyinnis.com" target="_blank">Kelsey Innis</a> / <a href="http://twitter.com/kelseyinnis" target="_blank">@kelseyinnis</a></small>
 					</p>
 				</section>
-
 				<section>
-					<h2>Heads Up</h2>
+					<h2>Hi!</h2>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+					I'm Kelsey.
 					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<p>
+					I work at <a href="http://www.stackmob.com" target="_blank">StackMob</a> writing code that lets our users create & manage their applications, APIs, and data through the browser. I use Scala and the <a href="http://liftweb.net/" target="_blank">Lift</a> web framework to do that. 
+					</p>
+					<aside class="notes">Who are you? What language do you mainly use, how long have you been coding, ask about Coursera</aside>
 				</section>
-
-				<!-- Example of nested vertical slides -->
+				<section>
+				<h2>Why are you here?</h2>
+					<iframe class="fragment" width="640" height="480" src="http://www.youtube.com/embed/Lb8BCl6NKn0" frameborder="0" allowfullscreen></iframe>
+					<p class="fragment">To learn to write code with drive that don't take no jive.</p>
+				</section>
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
+						<h2>The Pam Grier Criteria for Code Badassery</h2>
+						<div class="fragment">
+							<p>Code, like Pam Grier, should be:</p>
+							<ul>
+								<li>Powerful,</li>
+								<li>Beautiful, and</li>
+								<li>Tough to mess with.</li>
+								</ul>
+						</div>
+					</section>
+					<section>
+						<img src="images/powerful.jpg">
+						<h2>Powerful</h2>
+						<ul>
+							<li>Do big things</li>
+							<li>Do them easily</li>
+							<li>Do them quickly</li>
+						</ul>
 						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>rvl.io</h2>
-					<p>
-						If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-							<section data-markdown>
-							  ## Markdown support
-
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> -
-						<a href="?#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#" class="image navigate-next">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
+						<img src="images/tough.jpg">
+						<h2>Tough to mess with</h2>
+						<ul>
+							<li>Secure from outside manipulation</li>
+							<li>Hard to unintentionally make mistakes</li>
+							<li>Easy to maintain</li>
+						</ul>
 						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
+							Another word for this (in terms of code) is "robust", but I felt weird calling Pam Grier "robust"						</aside>
+					</section>
+					<section>
+						<img src="images/beautiful.jpg">
+						<h2>Beautiful</h2>
+						<ul>
+							<li>Elegant, concise, and--yes--readable</li>
+							<li>Able to be easily reused</li>
+							<li>Fun to write</li>
+						</ul>
+						<aside class="notes">
+							I DO NOT want to objectify Ms. Grier! Functionify her instead! First two attributes contribute to & create her beauty/appeal, which is a decent analogy with Scala too
 						</aside>
 					</section>
+				</section>
+				<section>
+					<h2>Scala!</h2>
+					<ul>
+						<li>don't need parentheses for method calls</li>
+						<li>semicolons are optional</li>
+						<li>return value is the last line of the method</li>
+						<li>static typing with type inference</li>
+					<ul>
+					<aside class="notes">
+					    some things you'll notice
+					    <br/>
+						technically, you can use return, but it's a code smell--with functional code, it's hard to know where you're returning to
+						<br/>
+						static typing: variables have types. if a variable is of type string, the value assigned to it needs to be a string, and this is checked at compile time
+						<br/>type inference: when it's reasonable, the computer figures out what type you mean
+						<br/> it compiles down to java so you can write really javalike code, and many of us do to start</br>
+					</aside>
+				</section>
+				<section>
+					<h2>But what does it <i>look</i> like?</h2>
+					<pre><code contenteditable class="scala">val x: String = "a"
+val y = 2
+val z = 15.3
+val myThing = new Thing
+val theList = List("this", "sure", "is", "a", "list")
+val whatIsIt = theList(4)
+</code></pre>
+					<aside class="notes">
+					    ask audience what each type is
+					    they're smart enough to figure it out, so is the compiler
+					</aside>
+				</section>
+				<section>
+					<h2>But what does it <i>look</i> like?</h2>
+					<pre><code contenteditable class="scala">def haggle(theirPrice: Int, myOffer: Int): String = {	
+	val theResponse: String =
+		if (theirPrice <= myOffer + 5) {
+			"You've got a deal!"
+		} else {
+			"I definitely wouldn't pay more than " + 
+			(myOffer + (theirPrice - myOffer)/2) + 
+			" for it."
+		}
+	theResponse
+} 
+
+val askingPrice = 100
+val iWantToPay = 50
+val letsMakeADeal = haggle(askingPrice, iWantToPay)</code></pre>
+					<aside class="notes">
+					    point out that types are defined after the variable name<br/>
+					    return types are after the argument list<br/>
+					    we don't have to specifically say "return"<br/>
+					    take off theResponse, it still works<br/>
+					    take off String, it still works<br/>
+					</aside>
+				</section>
+				<section>
+					<h1>Functional <span style="letter-spacing:-14px">Programming</span></h1>
+				</section>
+				<section>
+					<h2>What is functional programming?</h2>
+					<p class="fragment">Well, what is a program?</p>
+					<img class="fragment" src="images/lookedatyourhands.jpg"/>
+				</section>
+				<section>
+					<h2>Ask A Kid</h2>
+					<h4><small>(or Simple English Wikipedia)</small></h4>
+					<img src="images/kid.png" style="float:left; border: none; background:none; box-shadow: none; margin-left:100px;"/>
+					<div style="background-image:url(images/speechbubble.png); background-repeat:no-repeat; background-size:100% 100%; float:left; width:300px; height:420px;padding-left:80px;padding-right:50px;padding-top:20px" ><br/>A computer program is a list of instructions that tell a computer what to do.</div>
+					<div class="fragment" style="position:absolute; font-weight:bold; font-size:200px;margin-top:230px;margin-left:50px;-webkit-transform: rotate(-25deg);-moz-transform: rotate(-55deg);color:red">WRONG</div>
+				</section>
+				<section>
+				<b>Imperative programming</b>:
+				<p>a sequence of commands that the computer carries out in sequence</p>
+				<br/>
+				<b>Object-oriented programming</b>:
+				<p>these instructions, and the data they manipulate, are organized into objects
+				<aside class="notes">
+						not wrong but only one kind of programming<br/>
+						object oriented is a kind of imperative<br/>
+					    imperative: you're saying "Do this, then do that, then do the other thing." <br/>
+					    oo: this is a doohickey that can do this, and it can talk to a whatzit that can do that. now have your doohick do this and then your whatzit do that.
+					</aside>
+				</section>
+				<section>
+					<b>If a program's not a series of commands, then what is it?</b>
+				</section>
+				<section>
+					<img src="images/keanu.jpg"/>
+				</section>
+				<section>
+				<blockquote cite="http://www.cs.nott.ac.uk/~gmh/faq.html">Functional programming is a style of programming that emphasizes the evaluation of expressions rather than the execution of commands.</blockquote>&mdash;<a href="http://www.cs.nott.ac.uk/~gmh/faq.html" target="_blank">comp.lang.functional FAQ</a>
+				<aside class="notes">
+					what things are, not what to do. <br/>
+					you're probably thinking two things:<br/>
+					   1. i tell the computer what things are all the time. this is some huge fancy programming technique?
+					   2. if i already knew what all the things were, i probably wouldn't need to write a computer program!
+					</aside>
+				</section>
+				<section>
+				<h2>What things are</h2>
+					<div class="fragment"><pre><code contenteditable class="scala">
+val theQueen = "Elizabeth II"
+					</code></pre>
+					<p> but also...</p>
+					</div>
+			<pre class="fragment"><code contenteditable class="scala">
+def theGovernor(state: State) = {
+	val candidates = state.getCandidates
+	candidates(getTopVoteGetter)
+}
+					</code></pre>
+					<aside class="notes">
+						WAY better example needed!!!!
+						<br/><br/>
+						read it out loud<br/>
+						first one is assignment<br/>
+						second one is a function, and it's the critical one<br/>
+						our building block for functional programming
+					</aside>
+				</section>
+				<section>
+					<h2>What is a function?</h2>
+					<img src="images/e40.png" style="float:left; border: none; background:none; box-shadow: none; margin-left:0px;"/>
+					<div style="background-image:url(images/speechbubbleR.png); background-repeat:no-repeat; background-size:100% 100%; position:absolute; bottom:40px; right:0; width:410px; height:330px;padding-left:55px;padding-right:30px;padding-top:95px; " ><br/>A function is a relation between values where each of its input values gives back exactly one output value, playa.</div>
+				<aside class="notes">
+					hey thanks e40!<br/>
+					so, this is the mathematical definition<br/>
+					both a definition and a rule...well, a guideline<br/>
+					stricter than the usual programming definition, which is usually just a subroutine that takes some or no parameters and returns a value<br/>
+					still covers a lot of things you know and love<br/>
+					you might know this as a "static method", which means it doesn't require an instance of a specific class OR that class's data to run
+				</aside>	
+				</section>
+				<section>
+				<h2>Some Functions</h2>
+				<ul>
+					<li>Math.sqrt(x)</li>
+					<li>Collections.max(list)</li>
+					<li>Arrays.copyOf(original, newLength)</li>
+					<li>String.valueOf(anInt)</li>
+				</ul>
+				</section>
+					<aside class="notes">
+						mention here that when we said that each input gave only one output, we didn't mean you could only put in one input value. we consider the input as a whole, so for each set of input values, there's only one output.
+					</aside>
+				<section>
+				<p>A function is <b>pure</b> if <q cite="http://www.nicollet.net/2011/10/functional-programming/">the impact of a function on the rest of the program [can] be described only in terms of its return type, and...the impact of the rest of the program on the function be described only in terms of its arguments</q>. (<a href="http://www.nicollet.net/2011/10/functional-programming/">Victor Nicollet</a>)</p>
+				<img src="images/function_machine.png"/>
+				</section>
+				<aside class="notes">
+					this illustration is how i learned it in math class. notice the box is closed--nothing goes into it at any point after the input<br/>
+					why? well, why would you put something in it? to change the output, which means our definition would fail, cause you could get 2 diff outputs for same input<br/>
+					and if you change something outside of the box, what if another function is using that value as an input? you've broken their definition of a function
+				</aside>
+				<section>
+				<p><b>This is our building block.</b></p>
+				<div class="fragment"><img src="images/unimpressed.jpg" width="396" height ="420"/>
+				<p><small>Sooooo....</small></p>
+				</div>
+				<aside class="notes">
+					so, we've taken away some of our abilities. what do we get in return?
+				</aside>
+				</section>
+				<section>
+						<h2>Functions are deterministic.</h2>
+						<p>You will always get the same result if you run them with the same data.</p>
+						<ul class="fragment">
+							<li>correctness is more clear</li>
+							<li>unit tests are a breeze</li> 
+							<li>debugging is more directed</li>
+						</ul>
+						<div class="tough badge fragment"><i>tough to mess with</i></div>
+						<aside class="notes">
+							correctness: you can reason about it<br/>
+							eliminates an entire category/vector of bugs<br/>
+							unit tests: you don't have to set up state<br/>
+							debugging can be easier to eliminate things. not easier in general!
+						</aside>
+				</section>
+				<section>
+						<h2>Functions are encapsulated.</h2>
+						<q cite="http://michaelochurch.wordpress.com/2012/12/06/functional-programs-rarely-rot/">With a referentially transparent function, the interface-level activity is all one needs to know about its behavior.</q>. (<a href="http://michaelochurch.wordpress.com/2012/12/06/functional-programs-rarely-rot/">Michael O. Church</a>)</p>
+						<ul class="fragment">
+							<li>readability</li>
+							<li>reuse</li>
+							<li>maintainability</li>
+						</ul>
+						<div class="fragment">
+							<div class="beautiful badge"><i>beautiful</i></div>
+						</div>
+						<div class="fragment">
+							<div class="tough badge" style="margin-top:20px"><i>tough to mess with</i></div>
+						</div>
+						<aside class="notes">
+							rest of the quote: "an unbounded amount of intermediate stuff can be shoved into an imperative program, with no change to its interface"</br>
+							readability: you can tell what's going to be affected by looking at the interface. interfaces can become complicated, but that encourages you to break the code down into smaller bits<br/>
+							smaller bits encourage reuse<br/>
+							changes have fewer unseen consequences
+						</aside>
+				</section>
+				<section>
+						<h2>Functions are commutative.</h2>
+						<pre><code contenteditable class="scala">val firstThing = doOneThing()
+val secondThing = doAnotherThing()
+
+val thirdThing = doTheLastThing(firstThing, secondThing)
+						</pre></code>
+						<ul class="fragment">
+							<li>parallelization</li>
+							<li>concurrency</li>
+							<li>lazy evaluation</li>
+						</ul>
+						<div class="fragment">
+							<div class="powerful badge"><i>powerful</i></div>
+						</div>
+						<aside class="notes">
+							fancy way of saying order doesn't matter<br/>
+							do we have to do the first two lines in the same order?<br/>
+							do the same computers have to do them?<br/>
+							when do they have to be done?<br/>
+							obviously sometimes order does matter, but we have ways of specifying that
+						</aside>
+				</section>
+				<section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>Data is immutable.</h2>
+							<p>Once an object is created, it cannot be changed.</p>
+							<p>If you need to change an object, make your own copy.</p>
+						<div>
+							<small>a quick detour back to Java...</small>
+							<pre style="margin-top:0"><code contenteditable class="scala">String s1 = "san dimas high school football rules"
+String s2 = s1.toUpperCase
+
+println("string 1: " + s1);
+println("string 2: " + s2);
+							</pre></code>
+						</div>
+						<aside class="notes">
+							this is because if you don't, an object could be changed while another function is in the middle of using it
+							val is a value, like adding final in java<br/>
+							scala has both immutable and mutable data structures, but defaults to immutable
+						</aside>
+						<ul>
+							<li>concurrency</li>
+							<li>rollback of data</li>
+							<li>simplicity</li>
+						</ul>
+						<div style="height:100px">
+							<div class="fragment powerful badge" style="left:0"><i>powerful</i></div>
+							<div class="fragment tough badge" style="left:46%; top: -100%"><i>tough to mess with</i></div>
+						</div>
+						<aside class="notes">
+							inherently threadsafe <br/>					
+							robust--many many bugs come from threads sharing mutable data<br/>
+							data structures are easier to implement <br/>
+							performance (only if someone asks!): doesn’t actually copy data, it copies references to the old data. example: linked list  
+						</aside>
 					</section>
 				</section>
-
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
+				<div style="float:left">
+				<div><img src="images/LEGO_brick.png"/></div>
 					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+						<li>Functions are deterministic</li>
+						<li>Functions are encapsulated</li>
+						<li>Functions are commutative</li>
+						<li>Data is immutable</li>
+					</ul>
+					</div>
+				<div class="fragment" style="float:right;"><img src="images/builder.jpg"/><p>Let's build.</p></div>
+				</section>
+				<section>
+					<div><img src="images/legobaby.jpg"/></div>
+					<p>...how?</p>
+					<aside class="notes">
+							need to know how to snap them together
+						</aside>
+				</section>
+				<section>			
+					<div><img src="images/firstclass.jpg"/></div>
+					<h3>functions as first class citizens</h3>
+					<aside class="notes">
+						one way has to do with how functions are treated in scala<br/>
+						functions are first class objects in scala
+					</aside>
+				</section>
+				<section>
+				<h3>First class citizens</h3>
+				<pre><code contenteditable class="scala">val longSkinnyThing: String = "this is a string"
+val listOfThem: List[String] = List("yarn","twine","thread")
+val freshNewLongSkinnyThing: String = spinFromFiber("wool")
+tieInAKnot(longSkinnyThing)</pre></code><br/>
+				<pre class="fragment"><code contenteditable class="scala"> class Rope(type:String) {
+    override def toString(): String = "You've put me on a diet!";
+}</pre></code>
+				<pre class="fragment"><code contenteditable class="scala">val longSkinnyThing: Rope = new Rope("nautical")
+val listOfThem: List[String] = 
+    List(longSkinnyThing, new Rope("climbing"), 
+    new Rope("clothesline"), new Rope("jump")) 
+val freshNewLongSkinnyThing: Rope = spinFromFiber("hemp")
+tieInAKnot(longSkinnyThing)</pre></code>
+				<aside class="notes">
+						can be assigned to variables, stored in data structures, returned as values, and passed to functions
+					</aside>
+				</section>
+				<section>
+				<pre><code contenteditable class="scala">val addSpam: (String) => String =
+	{ (x:String) => x + " and Spam" }
+addSpam("Egg and Bacon") 
+	//result: "Egg and Bacon and Spam"
+val menuOptions = List(addSpam, withoutSpam)
+menuOptions(1)("Egg and Bacon and Spam") 
+	//result: "You can't have that"
+</pre></code>
+<br/>
+	<p>addSpam's type is <code>(String) => String</code></p>
+	<p><code>(list of parameters' types) => return type</code></p>
+					<aside class="notes">
+						add brackets around function to make it easier to see
+						explain the type signature (it's confusing!)
+						we've assigned to variables & stored in data structures. last bit is kind of interesting but probably not very useful<br/>
+						so, let's return a function as a value						
+					</aside>
+				</section>
+				<section>
+				<h3>returning functions from functions</h3>
+				<pre><code contenteditable class="scala">def tagText(tag: String, text: String) = "<" + tag +">" + text + "</" + tag +">" 
+val noReally = tagText("em", "pay attention!!!!")
+	//result: &lt;em&gt;pay attention!!!!&lt;/em&gt;
+</pre></code>
+				<pre><code contenteditable class="scala">def tagText2(tag: String) = { (text:String) =>"<" + tag +">" + text + "</" + tag +">" }
+val tagWithAndSpam = tagText2("andSpam")
+val breakfast = tagWithAndSpam("Spam Bacon and Sausage")
+	//result: &lt;andSpam&gt;Spam Bacon and Sausage&lt;/andSpam&gt; 
+</pre></code>
+				<div>
+				<div class="fragment">
+							<div class="beautiful badge"><i>beautiful</i></div>
+						</div>
+						<div class="fragment">
+							<div class="powerful badge" style="margin-top:20px"><i>powerful</i></div>
+				</div>
+				</div>
+				<aside class="notes">
+						* use the words “partially applied”<br/>
+					* we’re using a function to return another function<br/>
+					* beautiful: much more readable<br/>
+					* powerful: really useful in writing libraries. you can provide your users with a framework and let them specialize<br/>
+						* you count as a consumer of your own code! reusable<br/>
+					* side note: could use this technique to break any function with multiple arguments into a chained series of single argument functions--Haskell does this
+				</aside>
+				</section>
+				<section>
+					<h3>Currying</h3>
+					<div><img src="images/curry.jpg"/><br/><h4>yum!</h4></div>
+					<aside class="notes">
+						* currying, after Haskell Curry
+						* recap: assigned as variables, put into data structure, returned from function. now: passing as arguments
+					</aside>
+				</section>
+				<section>
+				<h3>Higher-order functions</h3>
+				<a href="http://www.willamette.edu/~fruehr/logos/intro.html"><img src="images/higherorder.png"/></a>
+					<aside class="notes">
+						I didn't make this--it was created by a professor at Willamette university as a proposed design for Haskell shirts<br/>
+						functions that takes functions are called higher-order functions<br/>
+						the meat of functional programming</br>
+					</aside>
+				</section>
+				<section>
+				<h3>For Loop</h3>
+				<small>Java</small>
+				<pre><code contenteditable class="scala">public void talkAboutFruit {
+	Fruit[] fruits = {
+		new Fruit("apple"),
+		new Fruit("cherry"),
+		new Fruit("strawberry")
+	};
+	for (int i = 0; i < fruits.length; i++) {
+		System.out.println("Hey the other day I ate a " + fruits[i];
+	}
+}
+</pre></code>
+<small>Scala</small>
+<pre><code contenteditable class="scala"> def talkAboutFruit = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	for (i <- 0 until fruits.length) {
+		System.out.println("Hey the other day I ate a " + fruits(i);
+	}
+}
+</pre></code>
+					<aside class="notes">
+						walk through intention of code in Java (moronic)<br/>
+						they're pretty much the same.<br/>
+						there is a better way! how many times have you written something like this? this is boilerplate to the extreme
+					</aside>
+				</section>
+				<section>
+				<h2>let's get abstract</h2>
+				<p>a function that takes a list and a function</p>
+				<small><code>(list of parameters' types) => return type</code></small>
+				<code>foreach(fruitList:List(fruits), theFunction: (Fruit) => Unit): Unit</code>
+				<pre class="fragment"><code contenteditable class="scala"> def foreach(fruitList:List(fruits), theFunction: (Fruit) => Unit) = {
+	for (i <- 0 until fruitList.length) {
+		theFunction(fruits(i))
+	}			
+}
+</pre></code>
+				<pre class="fragment"><code contenteditable class="scala"> def talkAboutFruit = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	val tellEm = 
+		{ (f:Fruit) => System.out.println(
+			"Hey the other day I ate a " + f) }
+	foreach(fruits, tellEm)
+	}
+}
+</pre></code>
+				<aside class="notes">
+						what is always the same?<br/>
+						always writing that outer wrapper loop<br/>
+						if you could abstract it into a function, what would that look like?<br/>
+					</aside>
+				</section>
+				<section>
+				<h2>More abstracterer!</h2>
+				<code>foreach(theList:List(A), 
+				theFunction: (A) => Unit): Unit</code>
+<pre class="fragment"><code contenteditable class="scala">abstract class Collection[A] {
+	...
+	def foreach(theFunction: (A) => Unit): Unit
+	...
+}</pre></code>
+				<pre class="fragment"><code contenteditable class="scala"> def talkAboutFruit = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	val tellEm = 
+		{ (f:Fruit) => System.out.println(
+			"Hey the other day I ate a " + f) }
+	fruits.foreach(tellEm)
+	}
+}
+</pre></code>
+					<aside class="notes">
+						make it generic?<br/>
+						further! what if we could call for each on a bunch of different kinds of collections? you could get more generic with your type signatures, or define on parent class<br/>
+						this is what scala did. how you'd actually write this moronic code in scala<br/>
+						
+					</aside>
+				</section>
+								<section>
+				<h2>This: </h2>
+<pre><code contenteditable class="scala">abstract class Collection[A] {
+	...
+	def foreach(theFunction: (A) => Unit): Unit = {
+	 	for (i <- 0 until this.length) {
+			theFunction(this(i))
+		}	
+	}
+	...
+}</pre></code>
+				<h2 class="fragment">is <b>NOT</b> how Scala implemented foreach </h2>
+				<div class="fragment">
+							<div class="tough badge"><i>tough to mess with</i></div>
+						</div>
+				<div class="fragment">
+							<div class="powerful badge" style="margin-top:20px"><i>powerful</i></div>
+						</div>
+					<aside class="notes">
+						actual implementation does all sorts of cool functional tricks<br/>
+						we don't need to know anything about it though!<br/>
+						it can get better without us changing things, and we can't make dumb mistakes<br/>
+						cool balance--we get to configure what we want (the passed in function) while not caring about the mechanics of the iteration itself
+					</aside>
+				</section>
+				<section>
+				<h2>Something a little juicier</h2>
+<pre><code contenteditable class="scala">def makePies: List[Pie] = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	var pies = List()
+	for (i <- 0 until fruits.length) {
+		new Pie(fruits(i)) :: pies
+	}
+	pies
+}
+</pre></code>
+on a collection of A, you can <br/><code>map(theFunction: (A) => B): Collection[B]</code>
+<pre class="fragment"><code contenteditable class="scala">def makePies: List[Pie] = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	val makePie = { (f: Fruit) => new Pie(f) }
+	fruits.map(makePie)
+}
+</pre></code>
+					<aside class="notes">
+						explain list concatenation<br/>
+						point out var<br/>
+						this is another common operation: do something to each member of a list<br>
+						data is immutable though! so we'll want to return a new list of new objects no matter what</br>
+					</aside>
+				</section>
+				<section>
+					<h2>Anonymous Functions</h2>
+					<pre><code contenteditable class="scala">val kindOfFruit: String = "blueberry"
+val blueberryFruit = new Fruit(kindOfFruit)
+val alsoBlueberry = new Fruit("blueberry")
+
+val makePie = { (f: Fruit) => new Pie(f) }
+fruits.map(makePie) 
+//equivalent to 
+fruits.map( { (f: Fruit) => new Pie(f) } )
+</pre></code>
+					<div class="fragment"><pre><code contenteditable class="scala">def makePies: List[Pie] = {
+	val fruits = List(new Fruit("apple"),
+			  new Fruit("cherry"), 
+		   	  new Fruit("strawberry"))
+	fruits.map( { (f: Fruit) => new Pie(f) } )
+}
+</pre></code>
+<pre><code contenteditable class="scala">def makePies(fruits: List[Fruit]) : List[Pie]
+	 = fruits.map( { (f: Fruit) => new Pie(f) } )
+</pre></code></div>
+						<div class="fragment">
+							<div class="beautiful badge"><i>beautiful</i></div>
+						</div>
+				<aside class="notes">
+						you don't have to declare the intermediate value if you're not going to use it again <br/>
+						don't have to worry about that intermediate value getting changed somehow<br/>
+						obviously ridiculous here<br/>
+						this is still a oneliner, which makes it easy to pass into other functions anonymously--can build some cool stuff <br/>
+						want to abstract a little more--like if rhubarb comes into season <br/>
+						go back to last slide and compare<br/>
+						more concise, more readable--right to left<br/>
+						less variables to keep track of<br/>
+					</aside>
+				</section>
+				<section>
+					<h2>Collection handling</h2>
+					<div class="fragment">										<h4>filter</h4>
+					<pre><code contenteditable class="scala">val theList = List(new Fruit("apple"), new Fruit("pear"), new Fruit("cherry"), new Fruit("strawberry"), new Fruit("honeydew"))
+					
+scala> theList.filter( { (f: Fruit) => f.isDelicious } )
+res0: List[Fruit] = List(apple, cherry, strawberry)
+</pre></code>
+</div>
+<div class="fragment">
+<h4>fold</h4>
+					<pre><code contenteditable class="scala">scala> theList.fold("The fruits on this list are: ")( { (stringSoFar: String, f: Fruit) => stringSoFar + " " + f.name } )
+res1: String = "The fruits on this list are: apple pear cherry strawberry honeydew"
+</pre></code>
+</div>
+<div class="fragment">
+<h4>reduce</h4>
+					<pre><code contenteditable class="scala">scala> theList.fold(0)( { (count: Int, f: Fruit) => count + " " + f.totalPieces } )
+res2: Int = 42300
+
+theList.reduce( { (f: Fruit) => f.totalPieces } )
+res3: Int = 42300
+</pre></code>
+</div>
+						<div class="fragment">
+							<div class="powerful badge"><i>powerful</i></div>
+						</div>
+					<aside class="notes">	
+						combination of map & reduce = MapReduce, used by google to do massively huge data processing (and by a bunch of others as well)<br/>
+						fold & reduce are actually called foldLeft & reduceLeft, and have corresponding Right methods<br/>
+					</aside>
+				</section>
+				<section>
+					<h2>Nested For-Loops</h2>
+<pre><code contenteditable class="scala"> def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	val servings = List[Serving[Pie,IceCream]]()
+	for (p <- 0 until pies.length) {
+		for (i <- 0 until iceCreams.length) {
+			val serving = new Serving(p, i)
+			serving :: servings
+		}
+	}
+	servings
+}
+</pre></code>
+<pre class="fragment"><code contenteditable class="scala"> def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	pies.map( { (p: Pie) =>
+		iceCreams.map( { (i: IceCream) =>
+			new Serving(p, i)
+		} )
+	} )	
+}
+</pre></code>
+					<aside class="notes">	
+						walk over nested for loop<br/>
+						use printed notes to edit code into functional style<br/>
+						not bad<br/>
+						one little problem: it doesn't compile.<br/>
+						list of lists - explain why<br/>
+						use flatten
+					</aside>
+				</section>
+				<section>
+				<h3>Is This an Improvement?</h3>
+				<pre><code contenteditable class="scala">def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	val servingsLists = 
+		pies.map( { (p: Pie) =>
+			iceCreams.map( { (i: IceCream) =>
+				new Serving(p, i)
+			} )
+		} )
+	servingsLists.flatten
+}
+</pre></code>
+<div class="fragment"><img src="images/doubtful.jpg"/></div>
+				<aside class="notes">	
+					is this better?<br/>
+					pam's not sure, and neither am i<br/>
+					might be more powerful, but it's really not very pretty<br/>
+					just as much boilerplate as the imperative style<br/>
+					what if we want to add another loop? make each person in here a plate with each pie serving? have to map and then flatten over this whole thing again<br/>
+				</aside>
+				</section>
+				<section>
+					<h2>function composition</h2>
+					<div><img src="images/composition.png" width="250" height="300"/></div>
+<pre><code contenteditable class="scala">def bakeAPie(f: Fruit, c: Crust): Pie
+def eatAPie(p: Pie): HappyKelsey
+
+def bakeAndEatAPie(f: Fruit, c: Crust): HappyKelsey = eatAPie compose bakeAPie
+	//could also be written bakeAPie andThen eatAPie
+</pre></code>
+<div class="fragment"><code>flatten compose map</code> is <code>flatMap</code>, and it's <b>MAGIC</b></div>
+					<aside class="notes">	
+					two functions where you often end up passing the result of one to the other
+					abstract this away--it's called function composition<br/>
+					we want to turn them into one function<br>
+					turns out flatten(m map f) is flatMap, and it turns out flatMap is magic<br/>
+					go back and edit pie method<br/>
+					better, but still not exactly gorgeous
+				</aside>
+				</section>
+				<section>
+					<h2>For-Yield</h2>
+<pre><code contenteditable class="scala"> def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	for {
+		p <- pies
+		i <- iceCreams
+	} yield {
+		new Serving(p,i)
+	}
+}
+</pre></code>
+						
+							<div class="fragment">
+							<div class="beautiful badge"><i>beautiful!</i></div>
+						</div>
+				<aside class="notes">	
+					what does this look like it does?<br/>
+					syntactic sugar for a nested for loop<br/>
+					look back at original version -- this gets Pam's stamp of approval<br/>
+				</aside>
+				</section>
+				<section>
+					<h2>Fun With For-Yield</h2>
+<pre><code contenteditable class="scala"> def goodPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	for {
+		p <- pies
+		i <- iceCreams
+		val serving = new Serving(p,i)
+		if (serving.isGood)
+	} yield {
+		serving
+	}
+}
+</pre></code>
+<pre><code contenteditable class="scala"> def pleaseEverybody(audience: List[Person], pies: List[Pie], iceCreams: List[IceCream]): List(ThankYou) {
+	for {
+		person <- audience
+		p <- pies
+		i <- iceCreams
+		val serving = new Serving(p,i)
+		if (serving.isGood)
+	} yield {
+		person.feed(serving)
+	}
+}
+</pre></code>						
+							<div class="fragment powerful badge"><i>powerful</i></div>
+				<aside class="notes">	
+					very easily extensible, and readable
+				</aside>
+				</section>
+				<section>
+					<div><img src="images/hand.jpg"/></div>
+						<ul>
+						<li>partial application</li>
+						<li>higher order functions</li>
+						<li>function composition</li>
+						<li>for-yield</li>
+						</ul>
+					<aside class="notes">
+						<ul>
+							<li>partial application--andSpam, html tag</li>
+							<li>higher order functions--fruit, and eventually pie</li>
+							<li>function composition--added ice cream</li>
+							<li>for-yield--served it to you</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h2>and now for something <small>(not really)</small> completely different</h2>
+				</section>
+				<section>
+					<h2>null.</h2>
+					<img src="images/sinkhole.jpg"/>
+					<aside class="notes">
+						what is null? what can be null? what happens if you reference a null object? what kind of code does this lead to?
+					</aside>
+				</section>
+				<section>
+					<h3>yuck</h3>
+<pre><code contenteditable>public Serving&lt;Pie, IceCream&gt; serveBestALaMode(Pie key, Map&lt;Pie, IceCream&gt; pairings) {
+    if(pairings != null) {
+        IceCream iceCream = pairings.get(key);
+        if(iceCream != null) {
+            return new Serving(key, iceCream)
+        } else {
+        	return null;
+        }
+    }
+}
+</pre></code>		
+<h3 class="fragment">Scala programming doesn't use null. Yippee!</h3>
+				<aside class="notes">
+						big ups to my coworker Doug for this example<br/>
+						we have to make sure each of these things aren't null before we access them<br/>
+						so let's rewrite this--wait a second...what if we ask for a key tht isn't in there? a cow pie?
+					</aside>
+				</section>
+				<section>
+					<h2>Option</h2>
+					<p><code>Option[T]</code> is either a <code>Some</code> with a value of type T inside, or <code>None</code> representing nothing.</p>
+<pre><code contenteditable class="scala">val someOption: Option[String] = Some("this is a value")
+val noneOption: Option[String] = None
+
+val theSomeValue = someOption.get //returns "this is a value"
+val someIsDefined = someOption.isDefined //returns true
+
+val theNoneValue = noneOption.get //throws NoSuchElementException
+val someIsDefined = someOption.isDefined //returns false
+</pre></code>		
+					
+					<aside class="notes">
+						sometimes you need a value that means nothing. a key without a value in a map is one example. opening a file that doesn't exist is another. sometimes values are just optional-- 4 digit zip code suffix, or second address line<br/>
+						one of the things that's nice about this is that it lets you know which code could be null. if it isn't in an option, you don't have to check it (unless it came from java!!!)(
+					</aside>
+					</section>
+<section>
+<pre><code contenteditable class="scala"> def serveBestALaMode(key: Pie, pairings: Map[Pie, IceCream]): Option[Serving[Pie,IceCream]] = {
+	iceCream: Option[IceCream] = pairings.get(key);
+	if (iceCream.isDefined) {
+		Some(new Serving(key, iceCream.get))
+	} else {
+		None
+	}
+}
+</pre></code>
+<div class="fragment"><img src="images/doubtful.jpg"/></div>
+				<aside class="notes">
+						so, again, pam isn't sure<br/>
+						this isn't really any better. you still have to do this isDefined check everywhere, and if you mess up .get will throw an exception
+						and by the way what does this have to do with functional programming?
+					</aside>
+				</section>
+				<section>
+					<h2>Option is kind of like a Collection</h2>
+					<div class="fragment">
+					<h4>.map</h4>
+<pre><code contenteditable class="scala">someOption.map( {(str:String) => str + " SAN DIMAS HIGH SCHOOL FOOTBALL RULES"} )
+	//returns Some("this is a value SAN DIMAS HIGH SCHOOL FOOTBALL RULES")
+noneOption.map( {(str:String) => str + " SAN DIMAS HIGH SCHOOL FOOTBALL RULES"} )
+	//returns None
+</pre></code>	
+</div>
+<div class="fragment">
+					<h4>.flatMap</h4>
+<pre><code contenteditable class="scala">val favoritePie: Option[Pie] = Some(rhubarb)
+favoritePie.map({ (pie: Pie) => pairings.get(pie) })
+	//returns Some(Some(butterPecan))--whoops!
+favoritePie.flatMap( { (pie: Pie) => pairings.get(pie) } )
+	//returns Some(butterPecan)
+</pre></code>	
+</div>
+<div class="fragment">
+					<h4>.filter</h4>
+<pre><code contenteditable class="scala">val todaysSpecial: Option[Pie]
+val myOrder = todaysSpecial.filter( { (pie: Pie) => (pie != butterPecan) }
+</pre></code>	
+</div>
+					<aside class="notes">	
+						.map takes a function. that function takes a type of whatever the value inside the option is. whatever type that function returns, .map will return an option of that type<br/>
+					.flatMap takes a function. that function takes a type of whatever the value inside the option is. whatever type that function returns, .map will return an option of that type<br/>
+					filter function returns a bool. if the value doesn't satisfy the predicate, the option returned is none<br/>
+					</aside>
+				</section>
+				<section>
+					<h2>for-yield over Option</h2>
+<pre><code contenteditable class="scala"> for {
+	pie <- todaysSpecial
+	bestIceCream <- pairings.get(pie)
+	iceCream <- availableFlavors.get(bestIceCream) } yield {
+	myDessert
+}
+</pre></code>
+<div class="fragment">
+							<div class="beautiful badge"><i>beautiful</i></div>
+							<div class="powerful badge" style="margin-top:20px"><i>powerful</i></div>
+				</div>
+<div class="tough badge fragment" style="margin-top:20px"><i>tough to mess with</i></div>
+					<aside class="notes">	
+						you picky huh?<br/>
+						point out that value on left is inner value<br/>
+						if any of these is none, the result is none<br/>
+						we know for-yield is beautiful and powerful, but this is particularly tough to mess with--really readable and you know you're getting the right value<br/>
+						general pattern--validating a series of options before passing them to each other--is super common<br/>
+						for yield took care of nested for loops and also nested if statements
+					</aside>
+				</section>
+				<section>
+					<h2>Option is a monad</h2>
+					<h4 class="fragment">What is a monad?</h4>
+					<aside class="notes">	
+						eeeee!<br/>
+						famously scary aspect of functional programming. lots of tutorials, weird metaphors
+					</aside>
+				</section>
+				<section>
+					<p>"Let’s look at what it is that makes Thing a monad.</p>
+					<p> The first thing is that I can wrap up a value inside of a new Thing...We have a function of type A => Thing; a function which takes some value and wraps it up inside a new Thing.</p>
+					<p> We also have this fancy bind function, which digs inside our Thing and allows a function which we supply to use that value to create a new Thing. Scala calls this function “flatMap“....</p>
+					<p>What’s interesting here is the fact that bind is how you combine two things together in sequence. We start with one thing and use its value to compute a new thing."</p>&mdash;<a href="http://www.codecommit.com/blog/ruby/monads-are-not-metaphors" target="_blank">Daniel Spiewak</a>
+					<aside class="notes">	
+						walk through this quote with list then with option
+					</aside>
+				</section>
+				<section>
+					<h2>flatMap is magic</h2>
+					<p>flatMap hides our boilerplate. For Lists, it abstracts away a for-loop, letting us create a new List from an existing list. For Options, it abstracts away a null check, letting us create a new nullable value from an existing one.
+											<div class="tough badge fragment"><i>tough to mess with</i></div>
+					<aside class="notes">	
+						reduces point of failure. lets that boilerplate code be optimized
+					</aside>
+				</section>
+				<section>
+					<h2>other monads</h2>
+					<ul>
+						<li>accumulating errors</li>
+						<li>a cursor position in a database or file</li>
+						<li>states in a state machine</li>
+						<li>an environment that changes</li>
+					</ul>
+					<div class="powerful badge fragment"><i>powerful</i></div>
+					<aside class="notes">	
+						last one is how we handle side effects in functional code<br/>						
+					</aside>
+				</section>
+				<section>
+					<h3>extra credit whoa</h3>
+					<img src="images/semicolon.png" />
+					<h4 class="fragment">a semicolon is a monad</h4>
+				</section>
+				<section>
+					<ul>
+						<li>partial application</li>
+						<li>higher order functions</li>
+						<li>function composition</li>
+						<li>for-yield</li>
+						<li>monads</li>
 					</ul>
 				</section>
-
 				<section>
-					<h2>It's free</h2>
-					<p>
-						reveal.js and <a href="http://www.rvl.io">rvl.io</a> are entirely free but if you'd like to support the projects you can donate below.
-						Donations will go towards hosting and domain costs.
-					</p>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="hakim.elhattab@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="item_name" value="reveal.js / rvl.io">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					</form>
+					<h2>The Psychology of Functional Programming</li>
 				</section>
-
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+				<h2>readability</h2>
+					 “Is Clojure code hard to understand? Imagine if every time you read Java source code and encountered syntax elements like if statements, for loops, and anonymous classes, you had to pause and puzzle over what they mean. There are certain things that must be obvious to a person who wants to be a productive Java developer. Likewise there are parts of Clojure syntax that must be obvious for one to efficiently read and understand code. Examples include being comfortable with the use of let, apply, map, filter, reduce and anonymous functions...”&mdash;<a href="http://java.ociweb.com/mark/clojure/article.html">R. Mark Volkmann</a>
 				</section>
+				<section>
+					<h2>DSLs</h2>
+<pre><code contenteditable class="scala">class HelloWorldSpec extends Specification {
 
+    "The 'Hello world' string" should {
+      "contain 11 characters" in {
+        "Hello world" must have size(11)
+      }
+      "start with 'Hello'" in {
+        "Hello world" must startWith("Hello")
+      }
+      "end with 'world'" in {
+        "Hello world" must endWith("world")
+      }
+    }
+  }
+</pre></code>
+<small>from <a href="http://etorreborre.github.com/specs2/">specs2</a></small>
+					<aside class="notes">	
+						less boilerplate and type inference mean closer to english<br/>
+						really expressive<br/>
+						what's even cooler is that it's extremely extensible</br>
+						type signatures can get complicated, but you don't need to muck around in them for them to work<br/>
+					</aside>
+				</section>
+				<section>
+					<h2>Purity</h2>
+					<img src ="images/neckbeard.png"/>
+				</section>
+				<section>
+					<h2>Thank you</h2>
+					<img class="fragment" src="images/pamgrierpie.jpg"/>
+				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -352,9 +1089,7 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+				rollingLinks: false,
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [

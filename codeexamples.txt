@@ -1,0 +1,33 @@
+get rid of one for loop using map:
+def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	val servings = List[Serving[Pie,IceCream]]()
+	for (p <- 0 until pies.length) {
+		iceCreams.map( { (i: IceCream) =>
+			new Serving(p, i)
+		} )
+	}
+	servings
+}
+
+returns an empty list. we can fix that:
+def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	val servings = List[Serving[Pie,IceCream]]()
+	for (p <- 0 until pies.length) {
+		val newServings = iceCreams.map( { (i: IceCream) =>
+			new Serving(p, i)
+		} )
+		newServings ++ servings
+	}
+	servings
+}
+
+let's get rid of the outer loop using map again:
+def tryAllPairings(pies: List[Pie], iceCreams: List[IceCream]): List(Serving[Pie, IceCream]) {
+	( pies.map( { (p: Pie) =>
+		iceCreams.map( { (i: IceCream) =>
+			new Serving(p, i)
+		} )
+	} )	
+}
+
+not bad, but it doesn't compile
