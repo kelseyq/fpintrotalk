@@ -56,6 +56,7 @@ body, p, td, li, div {
 h1,h2,h3,h4,h5,h6 {
 	text-shadow: 0 0 0 #000 !important;
 }
+.reveal h1{font-size:3.27em}.reveal h2{font-size:1.61em}.reveal h3{font-size:1.25em}.reveal h4{font-size:1em}
 
 /* SECTION 5: Make hyperlinks more usable.
    Ensure links are underlined, and consider appending
@@ -119,7 +120,7 @@ ul, ol, div, p {
 	left: 0 !important;
 	top: 0 !important;
 	margin-left: 0px !important;
-	margin-top: 50px !important;
+	margin-top: 25px !important;
 	padding: 20px 0px !important;
 
 	opacity: 1 !important;
