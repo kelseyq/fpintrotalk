@@ -12,24 +12,30 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
-		<link rel="stylesheet" href="css/print/pdf.css">
-				<link rel="stylesheet" type="text/css" media="print" href="css/print/pdf.css">
+		<!--	<link rel="stylesheet" type="text/css" media="print" href="css/print/pdf.css"> -->
 
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
+	<!--	<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+		</script> -->
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 		<style>
+		.reveal code {
+			font-size:150%;
+			line-height:110%;
+		}
+		
 		.badge {
 			background-repeat:no-repeat;
 			background-position:left center;
@@ -68,6 +74,9 @@
 		 background:none !important; 
 		 box-shadow: none !important;
 		}
+		.reveal h2 {
+		 font-size: 1.75em;
+		}
 		</style>
 
 	</head>
@@ -86,7 +95,7 @@
 						 without Growing a Neckbeard</h1>
 					 </center>
 					<p>
-						<small>by <a href="http://nerd.kelseyinnis.com" target="_blank">Kelsey Innis</a> / <a href="http://twitter.com/kelseyinnis" target="_blank">@kelseyinnis</a></small>
+						<small>by <a href="http://nerd.kelseyinnis.com" target="_blank">Kelsey Gilmore-Innis</a> / <a href="http://twitter.com/kelseyinnis" target="_blank">@kelseyinnis</a></small>
 					</p>
 				</section>
 				<section>
@@ -95,7 +104,7 @@
 					I'm Kelsey.
 					</p>
 					<p>
-					I work at <a href="http://www.stackmob.com" target="_blank">StackMob</a> writing code that lets our users create & manage their applications, APIs, and data through the browser. I use Scala and the <a href="http://liftweb.net/" target="_blank">Lift</a> web framework to do that. 
+					I work at <a href="http://www.helloreverb.com" target="_blank">Reverb</a> writing code that something something. I use Scala to do that. 
 					</p>
 					<aside class="notes">Who are you? What language do you mainly use, how long have you been coding, ask about Coursera</aside>
 				</section>
@@ -104,10 +113,9 @@
 					<iframe class="fragment" width="640" height="480" src="http://www.youtube.com/embed/Lb8BCl6NKn0" frameborder="0" allowfullscreen></iframe>
 					<p class="fragment">To learn to write code with drive that don't take no jive.</p>
 				</section>
-				<section>
-					<section>
+			   <section>
 						<h2>The Pam Grier Criteria for Code Badassery</h2>
-						<div class="fragment">
+						<div>
 							<p>Code, like Pam Grier, should be:</p>
 							<ul>
 								<li>Powerful,</li>
@@ -115,7 +123,7 @@
 								<li>Tough to mess with.</li>
 								</ul>
 						</div>
-					</section>
+			  </section>
 					<section>
 						<img src="images/powerful.jpg">
 						<h2>Powerful</h2>
@@ -128,7 +136,7 @@
 						</p>
 					</section>
 					<section>
-						<img src="images/tough.jpg">
+						<img src="images/tough.jpg"  height="222" width ="317" >
 						<h2>Tough to mess with</h2>
 						<ul>
 							<li>Secure from outside manipulation</li>
@@ -150,8 +158,7 @@
 							I DO NOT want to objectify Ms. Grier! Functionify her instead! First two attributes contribute to & create her beauty/appeal, which is a decent analogy with Scala too
 						</aside>
 					</section>
-				</section>
-				<section>
+					<section>
 					<h2>Scala!</h2>
 					<ul>
 						<li>don't need parentheses for method calls</li>
@@ -175,7 +182,7 @@
 val y = 2
 val z = 15.3
 val myThing = new Thing
-val theList = List("this", "sure", "is", "a", "list")
+val theList = List("this", "is", "a", "list")
 val whatIsIt = theList(4)
 </code></pre>
 					<aside class="notes">
@@ -185,21 +192,18 @@ val whatIsIt = theList(4)
 				</section>
 				<section>
 					<h2>But what does it <i>look</i> like?</h2>
-					<pre><code contenteditable class="scala">def haggle(theirPrice: Int, myOffer: Int): String = {	
-	val theResponse: String =
-		if (theirPrice <= myOffer + 5) {
-			"You've got a deal!"
-		} else {
-			"I definitely wouldn't pay more than " + 
-			(myOffer + (theirPrice - myOffer)/2) + 
-			" for it."
-		}
-	theResponse
+					<pre><code contenteditable class="scala">def haggle(price: Int, offer: Int): String = {
+  val theResponse: String =
+    if (price <= offer + 5) {
+      "You've got a deal!"
+    } else {
+      "I definitely wouldn't pay more than " +
+      (offer + (price - offer)/2) + 
+      " for it."
+    }
+  theResponse
 } 
-
-val askingPrice = 100
-val iWantToPay = 50
-val letsMakeADeal = haggle(askingPrice, iWantToPay)</code></pre>
+</code></pre>
 					<aside class="notes">
 					    point out that types are defined after the variable name<br/>
 					    return types are after the argument list<br/>
@@ -213,8 +217,9 @@ val letsMakeADeal = haggle(askingPrice, iWantToPay)</code></pre>
 				</section>
 				<section>
 					<h2>What is functional programming?</h2>
-					<p class="fragment">Well, what is a program?</p>
-					<img class="fragment" src="images/lookedatyourhands.jpg"/>
+					<p class="fragment">Well, what is a program?<br/>
+					<img src="images/lookedatyourhands.jpg" width="50%"/>
+					</p>
 				</section>
 				<section>
 					<h2>Ask A Kid</h2>
@@ -268,7 +273,7 @@ def theGovernor(state: State) = {
 }
 					</code></pre>
 					<aside class="notes">
-						WAY better example needed!!!!
+						WAY better example needed!!!!--Tarantino movie?
 						<br/><br/>
 						read it out loud<br/>
 						first one is assignment<br/>
